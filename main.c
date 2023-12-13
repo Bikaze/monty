@@ -12,7 +12,7 @@ input_t var = {NULL, NULL};
 int main(int argc, char **argv)
 {
 	FILE *fp;
-	char line[128];
+	char line[1024];
 	int line_nbr = 0;
 	stack_t *stack = NULL;
 
@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 
-	while (fgets(line, 128, fp))
+	while (fgets(line, 1024, fp))
 	{
 		line_nbr++;
 		var.op = strtok(line, "\n ");
