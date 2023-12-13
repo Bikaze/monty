@@ -1,4 +1,7 @@
 #include "monty.h"
+
+input_t var = {NULL, NULL};
+
 /**
  * main - Main function that calls other functions in the program
  * @argc: Number of arguments passed to the program
@@ -6,11 +9,8 @@
  *
  * Return: 0 on success, non-zero on failure
  */
-
-	input_t var = {NULL, NULL};
 int main(int argc, char **argv)
 {
-	input_t var = {NULL, NULL};
 	FILE *fp;
 	char line[128];
 	int line_nbr = 0;
