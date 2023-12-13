@@ -9,12 +9,13 @@ void push(stack_t **stack, unsigned int line_number)
 {
 	int number;
 
-	number = atoi(var.nbr);
-	if (number == 0 || (number % (10 * strlen(var.nbr)) < 1))
+	if (check_nbr(var.nbr))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
+
+	number = atoi(var.nbr);
 
 	add_stacknode(stack, number);
 }

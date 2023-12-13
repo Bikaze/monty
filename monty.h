@@ -3,8 +3,8 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <unistd.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -57,4 +57,5 @@ void free_stack(stack_t *head);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **h, unsigned int line_number);
 void pint(stack_t **h, unsigned int line_number);
+int check_nbr(char *str);
 #endif
