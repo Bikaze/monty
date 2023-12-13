@@ -18,5 +18,3 @@ void push(stack_t **stack, unsigned int line_number)
 
 	add_stacknode(stack, number);
 }
-
-	

@@ -1,6 +1,7 @@
 #include "monty.h"
 
-/**interprete - map opcodes to respective functions
+/**
+ * interprete - map opcodes to respective functions
   *@stack: stack of pushed numbers
   *@line_number: number at which we are
   *
@@ -16,8 +17,7 @@ void interprete(stack_t **stack, unsigned int line_number)
 		{"pint", pint},
 		{NULL, NULL}
 	};
-	
-	while(opcode_list[i].opcode != NULL)
+	while (opcode_list[i].opcode != NULL)
 	{
 		if (strcmp(var.op, opcode_list[i].opcode) == 0)
 		{

@@ -1,9 +1,14 @@
 #include "monty.h"
-
-input_t var = {NULL, NULL};
-
+/**
+ * main - Main function that calls other functions in the program
+ * @argc: Number of arguments passed to the program
+ * @argv: Array of strings containing the arguments
+ *
+ * Return: 0 on success, non-zero on failure
+ */
 int main(int argc, char **argv)
 {
+	input_t var = {NULL, NULL};
 	FILE *fp;
 	char line[128];
 	int line_nbr = 0;
@@ -23,7 +28,7 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 
-	while(fgets(line, 128, fp))
+	while (fgets(line, 128, fp))
 	{
 		line_nbr++;
 		var.op = strtok(line, "\n ");
@@ -36,5 +41,5 @@ int main(int argc, char **argv)
 		free_stack(stack);
 
 	fclose(fp);
-	return 0;
+	return (0);
 }
