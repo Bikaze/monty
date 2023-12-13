@@ -33,11 +33,11 @@ int main(int argc, char **argv)
 	while (fgets(line, 1024, fp))
 	{
 		line_nbr++;
-		var.op = strtok(line, "\n ");
+		var.op = strtok(line, "\n\t\r ");
 		if (var.op != NULL)
 		{
 			if (strcmp(var.op, "push") == 0)
-				var.nbr = strtok(NULL, "\n ");
+				var.nbr = strtok(NULL, "\n\t\r ");
 			interprete(&stack, line_nbr);
 		}
 	}
