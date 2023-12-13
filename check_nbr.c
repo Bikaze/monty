@@ -17,7 +17,7 @@ int check_nbr(char *str)
 		}
 		else if (isdigit(str[i]) == 0)
 		{
-			return (0);
+			return (1);
 		}
 		i++;
 	}
