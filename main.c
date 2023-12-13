@@ -34,9 +34,12 @@ int main(int argc, char **argv)
 	{
 		line_nbr++;
 		var.op = strtok(line, "\n ");
-		if (strcmp(var.op, "push") == 0)
-			var.nbr = strtok(NULL, "\n ");
-		interprete(&stack, line_nbr);
+		if (var.op != NULL)
+		{
+			if (strcmp(var.op, "push") == 0)
+				var.nbr = strtok(NULL, "\n ");
+			interprete(&stack, line_nbr);
+		}
 	}
 
 	if (stack != NULL)
