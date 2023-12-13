@@ -6,6 +6,8 @@
  *
  * Return: 0 on success, non-zero on failure
  */
+
+	input_t var = {NULL, NULL};
 int main(int argc, char **argv)
 {
 	input_t var = {NULL, NULL};
