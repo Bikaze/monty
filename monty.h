@@ -58,4 +58,12 @@ void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **h, unsigned int line_number);
 void pint(stack_t **h, unsigned int line_number);
 int check_nbr(char *str);
+void pop(stack_t **h, unsigned int line_number);
+void swap(stack_t **h, unsigned int line_number);
+void add(stack_t **h, unsigned int line_number);
+void nop(stack_t **h, unsigned int line_number);
+void sub(stack_t **h, unsigned int line_number);
+void div(stack_t **h, unsigned int line_number);
+void mul(stack_t **h, unsigned int line_number);
+void mod(stack_t **h, unsigned int line_number);
 #endif
