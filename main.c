@@ -41,10 +41,8 @@ int main(int argc, char **argv)
 			interprete(&stack, line_nbr);
 		}
 	}
-
 	if (stack != NULL)
 		free_stack(stack);
-
 	fclose(fp);
 	return (0);
 }

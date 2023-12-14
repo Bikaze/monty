@@ -22,7 +22,7 @@ void mod(stack_t **h, unsigned int line_number)
 	}
 	else
 	{
-		(*h)->next->n = (*h)->next->n / (*h)->n;
+		(*h)->next->n = (*h)->next->n % (*h)->n;
 		tmp = *h;
 		*h = (*h)->next;
 		if (*h != NULL)

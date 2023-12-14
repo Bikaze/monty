@@ -5,7 +5,7 @@
   *@h: pointer to the head of the list
   *@line_number: the line on which we are
   */
-void div(stack_t **h, unsigned int line_number)
+void divide(stack_t **h, unsigned int line_number)
 {
 	stack_t *tmp;
 
