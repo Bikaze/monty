@@ -72,4 +72,6 @@ void pstr(stack_t **h, unsigned int line_number);
 void rotl(stack_t **h, unsigned int line_number);
 void rotr(stack_t **h, unsigned int line_number);
 stack_t *add_stacknode_end(stack_t **head, const int n);
+void queue(stack_t **h, unsigned int line_number);
+void stac(stack_t **h, unsigned int line_number);
 #endif

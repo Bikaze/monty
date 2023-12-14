@@ -27,6 +27,8 @@ void interprete(stack_t **stack, unsigned int line_number)
 		{"pstr", pstr},
 		{"rotl", rotl},
 		{"rotr", rotr},
+		{"queue", queue},
+		{"stack", stac},
 		{NULL, NULL}
 	};
 	while (opcode_list[i].opcode != NULL)

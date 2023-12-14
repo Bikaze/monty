@@ -32,15 +32,8 @@ int main(int argc, char **argv)
 	{
 		line_nbr++;
 		var.op = strtok(line, "\n\t\r ");
-		if (strcmp(var.op, "queue") == 0)
-			var.mode = "queue";
-		if (strcmp(var.op, "stack") == 0)
-			var.mode = "stack";
-		if (var.op != NULL
-				&& var.op[0] != '#'
-				&& strcmp(var.op, "queue") != 0
-				&& strcmp(var.op, "stack") != 0
-				)
+
+		if (var.op != NULL && var.op[0] != '#')
 		{
 			if (strcmp(var.op, "push") == 0)
 				var.nbr = strtok(NULL, "\n\t\r ");
