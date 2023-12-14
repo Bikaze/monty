@@ -18,8 +18,12 @@ void push(stack_t **stack, unsigned int line_number)
 	number = atoi(var.nbr);
 
 	if (strcmp(var.mode, "queue") == 0)
+	{
 		add_stacknode_end(stack, number);
-	else
+	}
+	else if(strcmp(var.mode, "stack") == 0)
+	{
 		add_stacknode(stack, number);
+	}
 
 }

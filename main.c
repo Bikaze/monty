@@ -1,6 +1,6 @@
 #include "monty.h"
 
-input_t var = {NULL, NULL, NULL};
+input_t var = {NULL, NULL, "stack"};
 
 /**
  * main - Main function that calls other functions in the program
