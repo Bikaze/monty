@@ -23,22 +23,24 @@ int main(int argc, char **argv)
 	}
 
 	fp = fopen(argv[1], "r");
-
 	if (fp == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-
 	while (fgets(line, 1024, fp))
 	{
 		line_nbr++;
 		var.op = strtok(line, "\n\t\r ");
 		if (strcmp(var.op, "queue") == 0)
 			var.mode = "queue";
-		else if (strcmp(var.op, "stack") == 0)
+		if (strcmp(var.op, "stack") == 0)
 			var.mode = "stack";
-		else if (var.op != NULL && var.op[0] != '#')
+		if (var.op != NULL
+				&& var.op[0] != '#'
+				&& strcmp(var.op, "queue") != 0
+				&& strcmp(var.op, "stack") != 0
+				)
 		{
 			if (strcmp(var.op, "push") == 0)
 				var.nbr = strtok(NULL, "\n\t\r ");
