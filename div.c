@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
-  *div - divides the second top element of a stack_t list by the first one
+  *divide - divides the second top element of a stack_t list by the first one
   *@h: pointer to the head of the list
   *@line_number: the line on which we are
   */
