@@ -21,7 +21,7 @@ void push(stack_t **stack, unsigned int line_number)
 	{
 		add_stacknode_end(stack, number);
 	}
-	else if(strcmp(var.mode, "stack") == 0)
+	else if (strcmp(var.mode, "stack") == 0)
 	{
 		add_stacknode(stack, number);
 	}
