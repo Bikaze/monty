@@ -17,5 +17,9 @@ void push(stack_t **stack, unsigned int line_number)
 
 	number = atoi(var.nbr);
 
-	add_stacknode(stack, number);
+	if (strcmp(var.mode, "queue") == 0)
+		add_stacknode_end(stack, number);
+	else
+		add_stacknode(stack, number);
+
 }

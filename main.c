@@ -1,6 +1,6 @@
 #include "monty.h"
 
-input_t var = {NULL, NULL};
+input_t var = {NULL, NULL, NULL};
 
 /**
  * main - Main function that calls other functions in the program
@@ -34,7 +34,11 @@ int main(int argc, char **argv)
 	{
 		line_nbr++;
 		var.op = strtok(line, "\n\t\r ");
-		if (var.op != NULL && var.op[0] != '#')
+		if (strcmp(var.op, "queue") == 0)
+			var.mode = "queue";
+		else if (strcmp(var.op, "stack") == 0)
+			var.mode = "stack";
+		else if (var.op != NULL && var.op[0] != '#')
 		{
 			if (strcmp(var.op, "push") == 0)
 				var.nbr = strtok(NULL, "\n\t\r ");
