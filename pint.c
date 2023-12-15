@@ -10,6 +10,7 @@ void pint(stack_t **h, unsigned int line_number)
 	if (h == NULL || *h == NULL)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
+		printf("\n");
 		exit(EXIT_FAILURE);
 	}
 	else
